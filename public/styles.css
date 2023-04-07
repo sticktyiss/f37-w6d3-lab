@@ -1,4 +1,57 @@
 body {
   background-image: url("https://i5.walmartimages.com/asr/31d81218-4e7f-4489-83a7-e66b5a43e456_1.3767e229d679f400414ccfb45b41869b.jpeg");
+}
+
+header {
+  margin: 20px;
+  display: flex;
+  align-self: center;
+  flex-direction: column;
   /* justify-content: center; */
+  text-align: center;
+  background-color: white;
+  border-radius: 10px;
+}
+
+header h1 {
+  /*FIXME:*/
+  display: block;
+}
+
+main {
+  margin: 20px;
+  position: absolute;
+  top: 40%;
+  left: 30%;
+  right: 30%;
+  text-align: center;
+}
+
+main p {
+  background-color: white;
+  border-radius: 10px;
+}
+
+div {
+  justify-content: center;
+  display: flex;
+  padding: 1%;
+  /* background-color: white;
+  border-radius: 10px; */
+}
+
+div button {
+  color: white;
+  background-color: black;
+  border-radius: 10px;
+  padding: 1%;
+  margin: 1%;
+}
+
+div label {
+  background-color: white;
+  padding: 1%;
+  border-radius: 10px;
+  align-self: center;
+  min-width: 3%;
 }

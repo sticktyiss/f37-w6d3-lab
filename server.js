@@ -1,8 +1,15 @@
 const express = require('express')
+const cors = require('cors')
 const app = express()
 
 app.use(express.static(`${__dirname}/public`))
+app.use(cors())
 
-app.listen(4000,
-  () => console.log(`server running on 4000`)
+const { incCount, getCounts } = require('./controller')
+
+app.get('/api/ducks', getCounts);
+app.put('/api/ducks/:type', incCount);
+
+app.listen(4040,
+  () => console.log(`server running on 4040`)
 )
