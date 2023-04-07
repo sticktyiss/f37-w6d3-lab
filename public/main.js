@@ -9,18 +9,17 @@ const label4 = document.querySelector('#custom label')
 
 const labels = [label1, label2, label3, label4]
 
-axios.get('http://localhost:4040/api/ducks')
+axios.get(`/api/ducks`)
   .then(res => {
     for(let i=0; i<labels.length; i++){
       num = res.data[i].count
-      console.log(num)
       labels[i].textContent = num
     }
   })
   .catch(theseHands => console.log(theseHands))
 
 button1.addEventListener('click', () => {
-  axios.put('http://localhost:4040/api/ducks/plain')
+  axios.put(`/api/ducks/plain`)
     .then(res => {
       label1.textContent = res.data
     })
@@ -29,7 +28,7 @@ button1.addEventListener('click', () => {
     })
 })
 button2.addEventListener('click', () => {
-  axios.put('http://localhost:4040/api/ducks/animal')
+  axios.put(`/api/ducks/animal`)
     .then(res => {
       label2.textContent = res.data
     })
@@ -38,7 +37,7 @@ button2.addEventListener('click', () => {
     })
 })
 button3.addEventListener('click', () => {
-  axios.put('http://localhost:4040/api/ducks/char')
+  axios.put(`/api/ducks/char`)
     .then(res => {
       label3.textContent = res.data
     })
@@ -47,7 +46,7 @@ button3.addEventListener('click', () => {
     })
 })
 button4.addEventListener('click', () => {
-  axios.put('http://localhost:4040/api/ducks/custom')
+  axios.put(`/api/ducks/custom`)
     .then(res => {
       label4.textContent = res.data
     })
